@@ -423,15 +423,23 @@ h1, h2, h3 {
   width: 965px;
   margin: 0 auto; }
 
-.main {
+.slideshow {
+  width: 1300px;
+  height: 440px;
+  overflow: hidden;
   position: relative; }
 
 .slideshow_item {
-  display: none;
-  width: 1300px;
-  height: 440px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
   background: url("../img/bg-vibe.jpg") no-repeat;
-  padding-top: 35px; }
+  padding-top: 35px;
+  -webkit-transition: left 0s .75s;
+  -o-transition: left 0s .75s;
+  transition: left 0s .75s; }
 
 .slideshow_item__yoga {
   background: url("../img/yoga-tablet.jpg") no-repeat; }
@@ -443,9 +451,6 @@ h1, h2, h3 {
 .slideshow_item__a-series {
   background: url("../img/bg-a-series.jpg") no-repeat;
   color: #fff; }
-
-.slideshow_item__active {
-  display: block; }
 
 .slideshow_item-logo {
   padding-left: 80px;
@@ -477,24 +482,24 @@ h1, h2, h3 {
   width: 230px;
   top: 40px;
   left: 905px;
-  background: #fff; }
+  background: #fff;
+  z-index: 12;
+  border: 1px solid #dfdcdc; }
 
 .tab_item {
   height: 88px;
-  border: 1px solid #dfdcdc; }
-
-.tab_item__active {
-  background: #f0f0f0; }
-
-.tab_link {
+  border: 1px solid #dfdcdc;
   display: block;
-  padding: 5px 15px; }
-  .tab_link:after {
+  cursor: pointer; }
+  .tab_item:after {
     display: block;
     clear: both;
     content: ""; }
 
-.tab_link-img {
+.tab_item__active {
+  background: #f0f0f0; }
+
+.tab_item img {
   float: left; }
 
 .tab_text {
@@ -503,3 +508,10 @@ h1, h2, h3 {
   font-size: 14px;
   width: 50%;
   padding-top: 10px; }
+
+.slideshow_item__active {
+  left: 0;
+  z-index: 11;
+  -webkit-transition: left .65s ease-out;
+  -o-transition: left .65s ease-out;
+  transition: left .65s ease-out; }
