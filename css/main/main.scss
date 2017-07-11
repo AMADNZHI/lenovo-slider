@@ -1,0 +1,104 @@
+.main {
+  position: relative;
+}
+
+.slideshow_list {
+
+}
+
+.slideshow_item {
+  display: none;
+  width: 1300px;
+  height: 440px;
+  background: url("../img/bg-vibe.jpg") no-repeat;
+  padding-top: 35px;
+}
+
+.slideshow_item__yoga {
+  background: url("../img/yoga-tablet.jpg") no-repeat;
+}
+
+.slideshow_item__ideapad {
+  background: url("../img/bg-big-ideapad.png") 50% 240% no-repeat,
+              url("../img/bg-ideapad.png") no-repeat;
+  color: #fff;
+}
+
+.slideshow_item__a-series {
+  background: url("../img/bg-a-series.jpg") no-repeat;
+  color: #fff;
+}
+
+.slideshow_item__active {
+  display: block;
+}
+
+.slideshow_item-logo {
+  padding-left: 80px;
+  margin-bottom: 100px;
+}
+
+.slideshow_item-title {
+  padding-left: 170px;
+}
+
+.slideshow_item-text {
+  width: 400px;
+}
+
+.slideshow_item-title h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 300;
+   padding: 0 30px;
+}
+
+.slideshow_item-title h2 {
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 30px;
+  color: #fff;
+  background: #cb1919;
+  font-weight: 500;
+}
+
+.tab_list {
+  position: absolute;
+  width: 230px;
+  top: 40px;
+  left: 905px;
+  background: #fff;
+}
+
+.tab_item {
+  height: 88px;
+  border: 1px solid #dfdcdc;
+}
+
+.tab_item__active {
+  background: #f0f0f0;
+}
+
+.tab_link {
+  display: block;
+  padding: 5px 15px;
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.tab_link-img {
+  float: left;
+}
+
+.tab_text {
+  float: right;
+  text-align: center;
+  font-size: 14px;
+  width: 50%;
+  padding-top: 10px;
+}
